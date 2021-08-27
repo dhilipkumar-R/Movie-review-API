@@ -10,7 +10,7 @@ namespace MovieReviewApp.Models
 {
     public class Crypto
     {
-        private static byte[] _salt = Encoding.ASCII.GetBytes("The MTP is a cool application to process Tax returns");
+        private static byte[] _salt = Encoding.ASCII.GetBytes("");
 
         public static string EncryptStringAES(string plainText, string sharedSecret)
         {
