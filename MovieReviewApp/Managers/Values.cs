@@ -133,7 +133,6 @@ namespace MovieReviewApp.Managers
         {
             try
             {
-                List<ObjectId> defaultIds = new List<ObjectId>();
 
                 var reviewdata = JsonConvert.DeserializeObject<List<Reviewlist>>(formObject);
 

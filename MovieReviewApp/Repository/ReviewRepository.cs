@@ -1,15 +1,13 @@
 ﻿using MongoDB.Driver;
 using MongoRepository.Persistence.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using MovieReviewApp.Models.utils;
+
 
 namespace MovieReviewApp.Repository
 {
     public class ReviewRepository : BaseMongoRepository<Review>
     {
-        private const string CaseCollectionName = "Cases_review";
+        private const string CaseCollectionName = Constants.BaseReview;
         private readonly MongoDataContext _dataContext;
 
         public ReviewRepository(MongoDataContext dataContext)
@@ -18,18 +16,6 @@ namespace MovieReviewApp.Repository
         }
         protected override IMongoCollection<Review> Collection => _dataContext.MongoDatabase.GetCollection<Review>(CaseCollectionName);
 
-        public virtual async Task<Review> SaveAsync(Review entity)
-        {
 
-            await Collection.ReplaceOneAsync(
-                x => x.Id.Equals(entity.Id),
-                entity,
-                new UpdateOptions
-                {
-                    IsUpsert = true
-                });
-
-            return entity;
-        }
     }
 }

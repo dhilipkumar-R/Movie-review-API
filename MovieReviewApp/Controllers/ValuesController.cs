@@ -34,7 +34,7 @@ namespace MovieReviewApp.Controllers
             }
             catch(Exception ex){
 
-                return new Handler() { Message = Constants.Exception, Exception = ex };
+                return new Handler() { Status = false, Message = Constants.Exception, Exception = ex };
             }
            
         }
@@ -84,7 +84,7 @@ namespace MovieReviewApp.Controllers
             catch (Exception ex)
             {
 
-                return new Handler() { Message = Constants.Exception, Exception = ex };
+                return new Handler() { Status = false, Message = Constants.Exception, Exception = ex };
             }
 
         }

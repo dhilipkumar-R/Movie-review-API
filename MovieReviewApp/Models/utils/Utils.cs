@@ -12,5 +12,8 @@ namespace MovieReviewApp.Models.utils
         public const string SuccessMessage = "Movie added successfully";
         public const string Exception = "Error Occurred";
         public const string TitleSuccessMessage = "Movie Updated successfully";
+        public const string BaseCase = "Movie Updated successfully";
+        public const string BaseRating = "Cases_rating";
+        public const string BaseReview = "Cases_review";
     }
 }
